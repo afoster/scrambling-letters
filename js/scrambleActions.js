@@ -26,6 +26,7 @@ export const setArgs = function (args, t) {
     obj.random = (typeof args.random !== 'undefined') ? args.random : [1000, 3000];
     obj.speed = (typeof args.speed !== 'undefined') ? args.speed : 100;
     obj.text = (typeof args.text !== 'undefined') ? args.text : false;
+    obj.numbersOnly = (typeof args.numbersOnly !== 'undefined') ? args.numbersOnly : false;
     obj.beforeEach = (typeof args.beforeEach !== 'undefined' && isFunction(args.beforeEach)) ? args.beforeEach : false;
     obj.afterEach = (typeof args.afterEach !== 'undefined' && isFunction(args.afterEach)) ? args.afterEach : false;
     obj.beforeAll = (typeof args.beforeAll !== 'undefined' && isFunction(args.beforeAll)) ? args.beforeAll : false;
