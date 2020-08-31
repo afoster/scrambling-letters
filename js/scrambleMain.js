@@ -61,7 +61,11 @@ export default function (element, scrambleFireArgs) {
           // break if a space
           if (' \t\n\r\v'.indexOf(letter) > -1) return false;
           // set new random letter
-          newLetters[i] = randomChar();
+          if (scrambleFireArgs.numbersOnly) {
+            newLetters[i] = Math.floor(Math.random() * 10);
+          } else {
+            newLetters[i] = randomChar();
+          }
           // reset individual letter if kill switch
           if (revert[i] === true) {
             newLetters[i] = truth[i];
